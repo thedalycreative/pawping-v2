@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pawfection — Dog Services Fremantle</title>
+    <link rel="icon" type="image/png" href="/images/logo-paw.png">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Lordicon -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+    <!-- Flowbite -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.7/dist/flowbite.min.js"></script>
+
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Poppins:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #f97316;
+            --primary-hover: #ea580c;
+            --bg-accent: #fffbeb;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Hover Glow */
+        .hover-glow:hover {
+            box-shadow: 0 10px 30px -10px rgba(249, 115, 22, 0.3);
+            transform: translateY(-5px);
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Service Cards Transition delay */
+        .service-card:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .service-card:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .service-card:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .service-card:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .service-card:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        .service-card:nth-child(6) {
+            transition-delay: 0.6s;
+        }
+
+        .service-card:nth-child(7) {
+            transition-delay: 0.7s;
+        }
+    </style>
+</head>
+
+<body class="bg-amber-50 text-slate-800">
+
+    <!-- NAV -->
+    <header class="fixed w-full bg-white/80 backdrop-blur shadow-sm z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+
+            <h1 class="text-2xl font-bold text-orange-600 flex items-center gap-2">
+                <i class="bi bi-paw-fill"></i>
+                Pawfection
+            </h1>
+
+            <nav class="hidden md:flex gap-8 font-semibold text-slate-600">
+                <a href="#services" class="hover:text-orange-600 transition-colors">Services</a>
+                <a href="#about" class="hover:text-orange-600 transition-colors">About</a>
+                <a href="index.html"
+                    class="flex items-center gap-1.5 text-coral font-bold hover:scale-105 transition-transform"
+                    style="color: #FF6B4A;">
+                    <i class="bi bi-geo-fill"></i>
+                    PawPing
+                </a>
+                <a href="#contact"
+                    class="bg-orange-500 text-white px-5 py-2 rounded-xl text-sm hover:bg-orange-600 transition-colors">Book
+                    Now</a>
+            </nav>
+
+            <button id="menuBtn" class="md:hidden text-slate-800">
+                <i class="bi bi-list text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden p-4 bg-white">
+            <a class="block py-2">Services</a>
+            <a class="block py-2">Products</a>
+            <a class="block py-2">About</a>
+            <a class="block py-2">Contact</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-orange-100 to-amber-50">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center p-6">
+
+            <div class="reveal">
+                <span
+                    class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 font-bold text-sm mb-4 uppercase tracking-wider">
+                    Fremantle's Favorite Sitter
+                </span>
+                <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-[1.1] text-slate-900">
+                    Premium care for your dog — <span class="text-orange-500 italic">with heart</span>
+                </h2>
+
+                <p class="mb-8 text-xl text-slate-600 max-w-lg leading-relaxed">
+                    Run by retired Claremont local **George Andrew**, Pawfection is a proud affiliate of **PawPing**. We
+                    deliver calm, reliable dog services tailored to your best friend's needs.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <button
+                        class="bg-orange-500 text-white px-8 py-4 rounded-2xl shadow-lg shadow-orange-200 font-bold hover:bg-orange-600 hover:-translate-y-1 transition-all">
+                        Book a Visit
+                    </button>
+                    <button
+                        class="bg-white text-slate-800 border-2 border-slate-100 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <div class="float-anim relative">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-amber-200 rounded-full blur-3xl opacity-50"></div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-orange-200 rounded-full blur-3xl opacity-50">
+                </div>
+                <div class="relative bg-white rounded-[2.5rem] shadow-2xl p-4 transform rotate-2">
+                    <img src="images/pawfection-hero00001.png" alt="Happy Golden Retriever in Fremantle"
+                        class="rounded-[2rem] w-full h-[450px] object-cover">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20">
+        <div class="max-w-6xl mx-auto p-6">
+
+            <div class="text-center mb-16 reveal">
+                <h3 class="text-4xl font-extrabold mb-4">Our Services</h3>
+                <p class="text-slate-600 max-w-2xl mx-auto">From overnight stays to daily enrichment, we provide
+                    everything your dog needs to feel at home and happy.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Pet hosting -->
+                <div
+                    class="reveal service-card bg-white rounded-3xl p-8 shadow-sm hover-glow transition-all border border-slate-50 group">
+                    <div
+                        class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <lord-icon src="https://cdn.lordicon.com/kxnfquon.json" trigger="hover" colors="primary:#f97316"
+                            style="width:48px;height:48px"></lord-icon>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="bi bi-house-heart text-orange-500"></i>
+                        <h4 class="font-bold text-xl">Pet hosting</h4>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">Your pet will stay over at the sitter’s home, enjoying a
+                        cozy home environment.</p>
+                </div>
+
+                <!-- Pet sitting -->
+                <div
+                    class="reveal service-card bg-white rounded-3xl p-8 shadow-sm hover-glow transition-all border border-slate-50 group">
+                    <div
+                        class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <lord-icon src="https://cdn.lordicon.com/pnhskovq.json" trigger="hover" colors="primary:#f97316"
+                            style="width:48px;height:48px"></lord-icon>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="bi bi-moon-stars text-orange-500"></i>
+                        <h4 class="font-bold text-xl">Pet sitting</h4>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">A sitter will stay overnight at your home, keeping your
+                        pet in their comfort zone.</p>
+                </div>
+
+                <!-- Pet daycare -->
+                <div
+                    class="reveal service-card bg-white rounded-3xl p-8 shadow-sm hover-glow transition-all border border-slate-50 group">
+                    <div
+                        class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <lord-icon src="https://cdn.lordicon.com/qhvikffk.json" trigger="hover" colors="primary:#f97316"
+                            style="width:48px;height:48px"></lord-icon>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="bi bi-brightness-high text-orange-500"></i>
+                        <h4 class="font-bold text-xl">Pet daycare</h4>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">Pet care during working hours with plenty of socialization
+                        and play.</p>
+                </div>
+
+                <!-- House visits -->
+                <div
+                    class="reveal service-card bg-white rounded-3xl p-8 shadow-sm hover-glow transition-all border border-slate-50 group">
+                    <div
+                        class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <lord-icon src="https://cdn.lordicon.com/qhviqcan.json" trigger="hover" colors="primary:#f97316"
+                            style="width:48px;height:48px"></lord-icon>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="bi bi-geo-alt text-orange-500"></i>
+                        <h4 class="font-bold text-xl">House visits</h4>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">Schedule a drop-in to check on your pet, provide food, or
+                        just some company.</p>
+                </div>
+
+                <!-- Dog walks -->
+                <div
+                    class="reveal service-card bg-white rounded-3xl p-8 shadow-sm hover-glow transition-all border border-slate-50 group">
+                    <div
+                        class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <lord-icon src="https://cdn.lordicon.com/mshpxrmq.json" trigger="hover" colors="primary:#f97316"
+                            style="width:48px;height:48px"></lord-icon>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="bi bi-compass text-orange-500"></i>
+                        <h4 class="font-bold text-xl">Dog walks</h4>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">Organise someone to exercise your dog with energetic
+                        coastal walks.</p>
+                </div>
+
+                <!-- Dog grooming -->
+                <div
+                    class="reveal service-card bg-white rounded-3xl p-8 shadow-sm hover-glow transition-all border border-slate-50 group">
+                    <div
+                        class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <lord-icon src="https://cdn.lordicon.com/vlybtisj.json" trigger="hover" colors="primary:#f97316"
+                            style="width:48px;height:48px"></lord-icon>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="bi bi-scissors text-orange-500"></i>
+                        <h4 class="font-bold text-xl">Dog grooming</h4>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">Have someone groom your dog to keep them looking and
+                        feeling their best.</p>
+                </div>
+
+                <!-- Dog training -->
+                <div
+                    class="reveal service-card bg-white rounded-3xl p-8 shadow-sm hover-glow transition-all border border-slate-50 group">
+                    <div
+                        class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <lord-icon src="https://cdn.lordicon.com/iifacybt.json" trigger="hover" colors="primary:#f97316"
+                            style="width:48px;height:48px"></lord-icon>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="bi bi-award text-orange-500"></i>
+                        <h4 class="font-bold text-xl">Dog training</h4>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">Get support on training and behaviour from experienced
+                        professionals.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto p-6">
+
+            <div class="text-center mb-16 reveal">
+                <h3 class="text-4xl font-extrabold mb-4">Shop Pawfection</h3>
+                <p class="text-slate-600 max-w-2xl mx-auto">Premium treats, toys, and grooming essentials for your furry
+                    friends.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div
+                    class="reveal rounded-[2rem] bg-white shadow-sm hover-glow border border-slate-50 overflow-hidden group">
+                    <div class="h-64 bg-slate-50 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-orange-100/20 to-transparent"></div>
+                        <div class="flex items-center justify-center h-full">
+                            <i class="bi bi-box-seam text-6xl text-orange-200"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <span
+                            class="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2 block">Natural</span>
+                        <h4 class="font-bold text-xl mb-2">Natural Treat Packs</h4>
+                        <p class="text-slate-600 mb-6 text-sm">Organic, grain-free snacks made in Perth.</p>
+                        <button
+                            class="w-full py-3 rounded-xl border-2 border-orange-500 text-orange-500 font-bold hover:bg-orange-500 hover:text-white transition-all">
+                            View Options
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="reveal rounded-[2rem] bg-white shadow-sm hover-glow border border-slate-50 overflow-hidden group">
+                    <div class="h-64 bg-slate-50 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-orange-100/20 to-transparent"></div>
+                        <div class="flex items-center justify-center h-full">
+                            <i class="bi bi-puzzle text-6xl text-orange-200"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2 block">Play</span>
+                        <h4 class="font-bold text-xl mb-2">Enrichment Toys</h4>
+                        <p class="text-slate-600 mb-6 text-sm">Keep their minds busy with puzzle toys.</p>
+                        <button
+                            class="w-full py-3 rounded-xl border-2 border-orange-500 text-orange-500 font-bold hover:bg-orange-500 hover:text-white transition-all">
+                            View Options
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="reveal rounded-[2rem] bg-white shadow-sm hover-glow border border-slate-50 overflow-hidden group">
+                    <div class="h-64 bg-slate-50 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-orange-100/20 to-transparent"></div>
+                        <div class="flex items-center justify-center h-full">
+                            <i class="bi bi-brush text-6xl text-orange-200"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2 block">Care</span>
+                        <h4 class="font-bold text-xl mb-2">Grooming Kits</h4>
+                        <p class="text-slate-600 mb-6 text-sm">Professional tools for home maintenance.</p>
+                        <button
+                            class="w-full py-3 rounded-xl border-2 border-orange-500 text-orange-500 font-bold hover:bg-orange-500 hover:text-white transition-all">
+                            View Options
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20">
+        <div class="max-w-5xl mx-auto text-center p-6 reveal">
+
+            <h3 class="text-3xl font-bold mb-6">Meet George</h3>
+
+            <p class="text-lg text-slate-600">
+                After retiring in Claremont, George Andrew built Pawfection to offer calm, trustworthy dog care rooted
+                in routine, patience and genuine connection.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-orange-600 text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 p-20 opacity-10">
+            <i class="bi bi-paw-fill text-[200px]"></i>
+        </div>
+        <div class="max-w-3xl mx-auto text-center p-6 reveal relative z-10">
+            <h3 class="text-4xl font-extrabold mb-6">Ready to give your dog the care they deserve?</h3>
+            <p class="text-xl text-orange-100 mb-10">Contact George today to discuss your dog's needs and schedule a
+                meet-and-greet.</p>
+            <button
+                class="bg-white text-orange-600 px-10 py-5 rounded-2xl shadow-xl font-extrabold text-lg hover:bg-orange-50 hover:-translate-y-1 transition-all">
+                Contact George Andrew
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <h1 class="text-3xl font-bold text-white flex items-center gap-2 mb-6">
+                    <i class="bi bi-paw-fill text-orange-500"></i>
+                    Pawfection
+                </h1>
+                <p class="max-w-sm mb-8 leading-relaxed">
+                    Premium, heart-centered dog services in Fremantle and surrounds. Trust in routine, patience, and
+                    genuine connection.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i
+                            class="bi bi-facebook"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i
+                            class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-4">
+                    <li><a href="#services" class="hover:text-orange-500 transition-colors">Our Services</a></li>
+                    <li><a href="#products" class="hover:text-orange-500 transition-colors">Shop Products</a></li>
+                    <li><a href="#about" class="hover:text-orange-500 transition-colors">Meet George</a></li>
+                    <li><a href="#contact" class="hover:text-orange-500 transition-colors">Book Now</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact Info</h4>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3"><i class="bi bi-geo-alt text-orange-500"></i> Fremantle, WA 6160
+                    </li>
+                    <li class="flex items-center gap-3"><i class="bi bi-telephone text-orange-500"></i> 0400 000 000
+                    </li>
+                    <li class="flex items-center gap-3"><i class="bi bi-envelope text-orange-500"></i>
+                        george@pawfection.au</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-6xl mx-auto px-6 pt-16 mt-16 border-t border-slate-800 flex flex-col md:flex-row justify-between gap-4 text-sm">
+            <p>&copy; 2025 Pawfection Dog Services. All rights reserved.</p>
+            <p>Made with <i class="bi bi-heart-fill text-red-500 mx-1"></i> in Fremantle</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn')
+        const mobileMenu = document.getElementById('mobileMenu')
+
+        menuBtn.onclick = () => mobileMenu.classList.toggle('hidden')
+
+        const reveals = document.querySelectorAll('.reveal')
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('show')
+            })
+        })
+        reveals.forEach(r => observer.observe(r))
+    </script>
+
+</body>
+
+</html>

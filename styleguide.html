@@ -1,657 +1,715 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<!--comment for test-->
+		<meta charset="UTF-8" />
+		<title>Dog Services Brand Kit</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@300;400;600&family=Playfair+Display:ital@1&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--green: #5a7d3d;
+				--sand: #cbae86;
+				--wood: #8b5e3c;
+				--ocean: #3c6e71;
+				--sun: #f4c95d;
+				--bg: #f5f1e6;
+				--text-dark: #2b2b2b;
+			}
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Dog Services Brand Kit</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@300;400;600&family=Playfair+Display:ital@1&display=swap"
-        rel="stylesheet">
-    <style>
-        :root {
-            --green: #5A7D3D;
-            --sand: #CBAE86;
-            --wood: #8B5E3C;
-            --ocean: #3C6E71;
-            --sun: #F4C95D;
-            --bg: #F5F1E6;
-            --text-dark: #2B2B2B;
-        }
+			* {
+				box-sizing: border-box;
+			}
 
-        * {
-            box-sizing: border-box;
-        }
+			body {
+				margin: 0;
+				font-family:
+					"Lato",
+					system-ui,
+					-apple-system,
+					BlinkMacSystemFont,
+					sans-serif;
+				background: var(--bg);
+				color: var(--text-dark);
+				line-height: 1.6;
+			}
 
-        body {
-            margin: 0;
-            font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
+			.page {
+				max-width: 1100px;
+				margin: 0 auto;
+				padding: 2.5rem 1.5rem 4rem;
+			}
 
-        .page {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2.5rem 1.5rem 4rem;
-        }
+			h1,
+			h2,
+			h3,
+			h4 {
+				font-family: "Montserrat", system-ui, sans-serif;
+				margin-top: 0;
+				letter-spacing: 0.03em;
+			}
 
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: "Montserrat", system-ui, sans-serif;
-            margin-top: 0;
-            letter-spacing: 0.03em;
-        }
+			h1 {
+				font-size: 2.4rem;
+				margin-bottom: 0.5rem;
+			}
 
-        h1 {
-            font-size: 2.4rem;
-            margin-bottom: 0.5rem;
-        }
+			h2 {
+				font-size: 1.6rem;
+				margin-top: 2.5rem;
+				border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+				padding-bottom: 0.4rem;
+			}
 
-        h2 {
-            font-size: 1.6rem;
-            margin-top: 2.5rem;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.06);
-            padding-bottom: 0.4rem;
-        }
+			h3 {
+				font-size: 1.2rem;
+				margin-top: 1.6rem;
+			}
 
-        h3 {
-            font-size: 1.2rem;
-            margin-top: 1.6rem;
-        }
+			h4 {
+				font-size: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+			}
 
-        h4 {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
+			p {
+				margin: 0.4rem 0 0.8rem;
+			}
 
-        p {
-            margin: 0.4rem 0 0.8rem;
-        }
+			.tagline {
+				font-family: "Playfair Display", serif;
+				font-style: italic;
+				font-size: 1.05rem;
+				color: #555;
+				margin-bottom: 1.5rem;
+			}
 
-        .tagline {
-            font-family: "Playfair Display", serif;
-            font-style: italic;
-            font-size: 1.05rem;
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
+			.grid {
+				display: grid;
+				gap: 1.5rem;
+			}
 
-        .grid {
-            display: grid;
-            gap: 1.5rem;
-        }
+			@media (min-width: 800px) {
+				.grid-2 {
+					grid-template-columns: 1.2fr 1fr;
+				}
 
-        @media (min-width: 800px) {
-            .grid-2 {
-                grid-template-columns: 1.2fr 1fr;
-            }
+				.grid-3 {
+					grid-template-columns: repeat(3, minmax(0, 1fr));
+				}
+			}
 
-            .grid-3 {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-        }
+			.card {
+				background: #ffffff;
+				border-radius: 12px;
+				padding: 1.4rem 1.6rem;
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+				border: 1px solid rgba(0, 0, 0, 0.03);
+			}
 
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 1.4rem 1.6rem;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 0, 0, 0.03);
-        }
+			.subtle {
+				font-size: 0.9rem;
+				color: #666;
+			}
 
-        .subtle {
-            font-size: 0.9rem;
-            color: #666;
-        }
+			/* Logo block (simple geometric paw placeholder) */
+			.logo-preview {
+				display: inline-flex;
+				align-items: center;
+				gap: 1rem;
+			}
 
-        /* Logo block (simple geometric paw placeholder) */
-        .logo-preview {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-        }
+			.paw-icon {
+				width: 96px;
+				height: 96px;
+				position: relative;
+			}
 
-        .paw-icon {
-            width: 96px;
-            height: 96px;
-            position: relative;
-        }
+			.paw-pad,
+			.paw-toe {
+				position: absolute;
+				clip-path: polygon(15% 0, 85% 0, 100% 40%, 80% 100%, 20% 100%, 0 40%);
+				border-radius: 4px;
+			}
 
-        .paw-pad,
-        .paw-toe {
-            position: absolute;
-            clip-path: polygon(15% 0, 85% 0, 100% 40%, 80% 100%, 20% 100%, 0 40%);
-            border-radius: 4px;
-        }
+			.paw-pad {
+				width: 60px;
+				height: 52px;
+				background: var(--wood);
+				left: 50%;
+				top: 46%;
+				transform: translate(-50%, -50%);
+			}
 
-        .paw-pad {
-            width: 60px;
-            height: 52px;
-            background: var(--wood);
-            left: 50%;
-            top: 46%;
-            transform: translate(-50%, -50%);
-        }
+			.paw-toe {
+				width: 30px;
+				height: 32px;
+			}
 
-        .paw-toe {
-            width: 30px;
-            height: 32px;
-        }
+			.toe-1 {
+				background: var(--green);
+				left: 10%;
+				top: 10%;
+			}
 
-        .toe-1 {
-            background: var(--green);
-            left: 10%;
-            top: 10%;
-        }
+			.toe-2 {
+				background: var(--sun);
+				left: 50%;
+				top: 4%;
+				transform: translateX(-50%);
+			}
 
-        .toe-2 {
-            background: var(--sun);
-            left: 50%;
-            top: 4%;
-            transform: translateX(-50%);
-        }
+			.toe-3 {
+				background: var(--ocean);
+				right: 10%;
+				top: 10%;
+			}
 
-        .toe-3 {
-            background: var(--ocean);
-            right: 10%;
-            top: 10%;
-        }
+			.toe-4 {
+				background: var(--sand);
+				left: 50%;
+				top: 26%;
+				transform: translateX(-50%) rotate(180deg);
+			}
 
-        .toe-4 {
-            background: var(--sand);
-            left: 50%;
-            top: 26%;
-            transform: translateX(-50%) rotate(180deg);
-        }
+			.brand-name {
+				font-family: "Montserrat", system-ui, sans-serif;
+				font-weight: 700;
+				font-size: 1.6rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+			}
 
-        .brand-name {
-            font-family: "Montserrat", system-ui, sans-serif;
-            font-weight: 700;
-            font-size: 1.6rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
+			.brand-descriptor {
+				font-size: 0.9rem;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: #777;
+				margin-top: 0.2rem;
+			}
 
-        .brand-descriptor {
-            font-size: 0.9rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: #777;
-            margin-top: 0.2rem;
-        }
+			.pill {
+				display: inline-flex;
+				align-items: center;
+				padding: 0.2rem 0.7rem;
+				border-radius: 999px;
+				font-size: 0.75rem;
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				background: rgba(0, 0, 0, 0.04);
+				color: #555;
+			}
 
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.2rem 0.7rem;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            background: rgba(0, 0, 0, 0.04);
-            color: #555;
-        }
+			/* Color swatches */
+			.swatches {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+				margin-top: 0.8rem;
+			}
 
-        /* Color swatches */
-        .swatches {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 0.8rem;
-        }
+			.swatch {
+				width: 130px;
+				border-radius: 10px;
+				overflow: hidden;
+				border: 1px solid rgba(0, 0, 0, 0.06);
+				background: #fff;
+			}
 
-        .swatch {
-            width: 130px;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            background: #fff;
-        }
+			.swatch-color {
+				height: 60px;
+			}
 
-        .swatch-color {
-            height: 60px;
-        }
+			.swatch-meta {
+				padding: 0.5rem 0.7rem 0.6rem;
+				font-size: 0.8rem;
+			}
 
-        .swatch-meta {
-            padding: 0.5rem 0.7rem 0.6rem;
-            font-size: 0.8rem;
-        }
+			.swatch-name {
+				font-weight: 600;
+				margin-bottom: 0.1rem;
+			}
 
-        .swatch-name {
-            font-weight: 600;
-            margin-bottom: 0.1rem;
-        }
+			.swatch-hex {
+				font-family: "Montserrat", monospace;
+				font-size: 0.78rem;
+				color: #555;
+			}
 
-        .swatch-hex {
-            font-family: "Montserrat", monospace;
-            font-size: 0.78rem;
-            color: #555;
-        }
+			/* Typography samples */
+			.type-sample {
+				margin-top: 0.6rem;
+				padding-top: 0.4rem;
+				border-top: 1px dashed rgba(0, 0, 0, 0.08);
+			}
 
-        /* Typography samples */
-        .type-sample {
-            margin-top: 0.6rem;
-            padding-top: 0.4rem;
-            border-top: 1px dashed rgba(0, 0, 0, 0.08);
-        }
+			.type-label {
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				color: #777;
+				margin-bottom: 0.2rem;
+			}
 
-        .type-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: #777;
-            margin-bottom: 0.2rem;
-        }
+			.type-heading {
+				font-family: "Montserrat", system-ui, sans-serif;
+				font-weight: 700;
+				font-size: 1.4rem;
+			}
 
-        .type-heading {
-            font-family: "Montserrat", system-ui, sans-serif;
-            font-weight: 700;
-            font-size: 1.4rem;
-        }
+			.type-subheading {
+				font-family: "Lato", system-ui, sans-serif;
+				font-weight: 600;
+				font-size: 1rem;
+			}
 
-        .type-subheading {
-            font-family: "Lato", system-ui, sans-serif;
-            font-weight: 600;
-            font-size: 1rem;
-        }
+			.type-body {
+				font-family: "Lato", system-ui, sans-serif;
+				font-weight: 400;
+				font-size: 0.9rem;
+			}
 
-        .type-body {
-            font-family: "Lato", system-ui, sans-serif;
-            font-weight: 400;
-            font-size: 0.9rem;
-        }
+			.type-accent {
+				font-family: "Playfair Display", serif;
+				font-style: italic;
+				font-size: 1rem;
+			}
 
-        .type-accent {
-            font-family: "Playfair Display", serif;
-            font-style: italic;
-            font-size: 1rem;
-        }
+			/* Personality chips */
+			.chips {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4rem;
+				margin: 0.4rem 0 0.8rem;
+			}
 
-        /* Personality chips */
-        .chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin: 0.4rem 0 0.8rem;
-        }
+			.chip {
+				font-size: 0.78rem;
+				padding: 0.25rem 0.7rem;
+				border-radius: 999px;
+				border: 1px solid rgba(0, 0, 0, 0.08);
+				background: rgba(255, 255, 255, 0.8);
+			}
 
-        .chip {
-            font-size: 0.78rem;
-            padding: 0.25rem 0.7rem;
-            border-radius: 999px;
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            background: rgba(255, 255, 255, 0.8);
-        }
+			/* Example components */
+			.example-header {
+				background: linear-gradient(
+					135deg,
+					rgba(60, 110, 113, 0.96),
+					rgba(90, 125, 61, 0.96)
+				);
+				color: #fff;
+				border-radius: 16px;
+				padding: 1.6rem 1.8rem;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 1.4rem;
+				margin-top: 0.8rem;
+			}
 
-        /* Example components */
-        .example-header {
-            background: linear-gradient(135deg, rgba(60, 110, 113, 0.96), rgba(90, 125, 61, 0.96));
-            color: #fff;
-            border-radius: 16px;
-            padding: 1.6rem 1.8rem;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 1.4rem;
-            margin-top: 0.8rem;
-        }
+			.example-header .brand-name {
+				color: #fff;
+			}
 
-        .example-header .brand-name {
-            color: #fff;
-        }
+			.example-header .brand-descriptor {
+				color: rgba(255, 255, 255, 0.8);
+			}
 
-        .example-header .brand-descriptor {
-            color: rgba(255, 255, 255, 0.8);
-        }
+			.example-header-cta {
+				margin-left: auto;
+				min-width: 180px;
+				text-align: right;
+			}
 
-        .example-header-cta {
-            margin-left: auto;
-            min-width: 180px;
-            text-align: right;
-        }
+			.btn-primary {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0.55rem 1.2rem;
+				border-radius: 999px;
+				border: none;
+				background: var(--sun);
+				color: #3b2b10;
+				font-family: "Montserrat", system-ui, sans-serif;
+				font-weight: 600;
+				font-size: 0.85rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				cursor: pointer;
+				box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+			}
 
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.55rem 1.2rem;
-            border-radius: 999px;
-            border: none;
-            background: var(--sun);
-            color: #3b2b10;
-            font-family: "Montserrat", system-ui, sans-serif;
-            font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            cursor: pointer;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
-        }
+			.btn-primary:hover {
+				filter: brightness(1.05);
+			}
 
-        .btn-primary:hover {
-            filter: brightness(1.05);
-        }
+			.example-card {
+				border-radius: 14px;
+				padding: 1.1rem 1.2rem;
+				background: #fff;
+				border: 1px solid rgba(0, 0, 0, 0.06);
+				font-size: 0.9rem;
+			}
 
-        .example-card {
-            border-radius: 14px;
-            padding: 1.1rem 1.2rem;
-            background: #fff;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            font-size: 0.9rem;
-        }
+			.example-card h4 {
+				margin-top: 0;
+				margin-bottom: 0.3rem;
+			}
 
-        .example-card h4 {
-            margin-top: 0;
-            margin-bottom: 0.3rem;
-        }
+			.example-card small {
+				font-size: 0.75rem;
+				color: #777;
+			}
 
-        .example-card small {
-            font-size: 0.75rem;
-            color: #777;
-        }
+			.footer-note {
+				margin-top: 2.5rem;
+				font-size: 0.8rem;
+				color: #777;
+				text-align: center;
+			}
+		</style>
+	</head>
 
-        .footer-note {
-            margin-top: 2.5rem;
-            font-size: 0.8rem;
-            color: #777;
-            text-align: center;
-        }
-    </style>
-</head>
+	<body>
+		<div class="page">
+			<!-- HEADER / BRAND OVERVIEW -->
+			<header>
+				<h1>Dog Services Brand Kit</h1>
+				<p class="tagline">
+					Professional, nature‑driven care for dogs who love the outdoors.
+				</p>
+				<div class="logo-preview">
+					<div class="paw-icon">
+						<div class="paw-pad"></div>
+						<div class="paw-toe toe-1"></div>
+						<div class="paw-toe toe-2"></div>
+						<div class="paw-toe toe-3"></div>
+						<div class="paw-toe toe-4"></div>
+					</div>
+					<div>
+						<div class="brand-name">[Brand Name]</div>
+						<div class="brand-descriptor">
+							Dog Walking · Sitting · Daycare · Products
+						</div>
+						<div style="margin-top: 0.6rem">
+							<span class="pill">Primary Logo Lockup</span>
+						</div>
+					</div>
+				</div>
+				<p class="subtle" style="margin-top: 0.8rem">
+					Replace <strong>[Brand Name]</strong> with your chosen name and use this
+					lockup as your primary brand mark.
+				</p>
+			</header>
 
-<body>
-    <div class="page">
-        <!-- HEADER / BRAND OVERVIEW -->
-        <header>
-            <h1>Dog Services Brand Kit</h1>
-            <p class="tagline">Professional, nature‑driven care for dogs who love the outdoors.</p>
-            <div class="logo-preview">
-                <div class="paw-icon">
-                    <div class="paw-pad"></div>
-                    <div class="paw-toe toe-1"></div>
-                    <div class="paw-toe toe-2"></div>
-                    <div class="paw-toe toe-3"></div>
-                    <div class="paw-toe toe-4"></div>
-                </div>
-                <div>
-                    <div class="brand-name">[Brand Name]</div>
-                    <div class="brand-descriptor">Dog Walking · Sitting · Daycare · Products</div>
-                    <div style="margin-top:0.6rem;">
-                        <span class="pill">Primary Logo Lockup</span>
-                    </div>
-                </div>
-            </div>
-            <p class="subtle" style="margin-top:0.8rem;">
-                Replace <strong>[Brand Name]</strong> with your chosen name and use this lockup as your primary brand
-                mark.
-            </p>
-        </header>
+			<!-- LOGO SYSTEM -->
+			<section>
+				<h2>Logo System</h2>
+				<div class="grid grid-2">
+					<div class="card">
+						<h3>Primary Logo</h3>
+						<p>
+							A stylised, geometric paw print with angular shapes and a balanced earthy
+							palette. Designed to feel professional, trustworthy, and
+							outdoors‑oriented rather than cutesy or childish.
+						</p>
+						<ul class="subtle">
+							<li>
+								Use on website headers, signage, business cards, and official documents.
+							</li>
+							<li>
+								Maintain clear space equal to at least the height of one toe pad around
+								the logo.
+							</li>
+							<li>
+								Avoid placing on busy photographic backgrounds without a solid or
+								translucent overlay.
+							</li>
+						</ul>
+					</div>
+					<div class="card">
+						<h3>Icon & Monogram Usage</h3>
+						<p>
+							The paw icon alone can be used as a social avatar, app icon, or
+							small‑scale mark.
+						</p>
+						<ul class="subtle">
+							<li>Use icon‑only at small sizes where text would be unreadable.</li>
+							<li>
+								For monochrome applications, use solid dark wood or deep ocean blue.
+							</li>
+							<li>
+								Keep angles and proportions consistent—do not stretch or distort the
+								paw.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 
-        <!-- LOGO SYSTEM -->
-        <section>
-            <h2>Logo System</h2>
-            <div class="grid grid-2">
-                <div class="card">
-                    <h3>Primary Logo</h3>
-                    <p>
-                        A stylised, geometric paw print with angular shapes and a balanced earthy palette. Designed to
-                        feel
-                        professional, trustworthy, and outdoors‑oriented rather than cutesy or childish.
-                    </p>
-                    <ul class="subtle">
-                        <li>Use on website headers, signage, business cards, and official documents.</li>
-                        <li>Maintain clear space equal to at least the height of one toe pad around the logo.</li>
-                        <li>Avoid placing on busy photographic backgrounds without a solid or translucent overlay.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Icon & Monogram Usage</h3>
-                    <p>
-                        The paw icon alone can be used as a social avatar, app icon, or small‑scale mark.
-                    </p>
-                    <ul class="subtle">
-                        <li>Use icon‑only at small sizes where text would be unreadable.</li>
-                        <li>For monochrome applications, use solid dark wood or deep ocean blue.</li>
-                        <li>Keep angles and proportions consistent—do not stretch or distort the paw.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+			<!-- COLOR PALETTE -->
+			<section>
+				<h2>Color Palette</h2>
+				<p>
+					A balanced earthy mix that reflects nature, reliability, and warmth. Use
+					color intentionally—keep layouts mostly neutral with one or two accent
+					colors.
+				</p>
+				<div class="card">
+					<h3>Core Colors</h3>
+					<div class="swatches">
+						<div class="swatch">
+							<div class="swatch-color" style="background: var(--green)"></div>
+							<div class="swatch-meta">
+								<div class="swatch-name">Grass Green</div>
+								<div class="swatch-hex">#5A7D3D</div>
+								<div class="subtle">Nature, energy, outdoor walks</div>
+							</div>
+						</div>
+						<div class="swatch">
+							<div class="swatch-color" style="background: var(--sand)"></div>
+							<div class="swatch-meta">
+								<div class="swatch-name">Sand Brown</div>
+								<div class="swatch-hex">#CBAE86</div>
+								<div class="subtle">Neutral base, backgrounds</div>
+							</div>
+						</div>
+						<div class="swatch">
+							<div class="swatch-color" style="background: var(--wood)"></div>
+							<div class="swatch-meta">
+								<div class="swatch-name">Warm Wood</div>
+								<div class="swatch-hex">#8B5E3C</div>
+								<div class="subtle">Primary text & logo pad</div>
+							</div>
+						</div>
+						<div class="swatch">
+							<div class="swatch-color" style="background: var(--ocean)"></div>
+							<div class="swatch-meta">
+								<div class="swatch-name">Ocean Blue</div>
+								<div class="swatch-hex">#3C6E71</div>
+								<div class="subtle">Depth, trust, contrast</div>
+							</div>
+						</div>
+						<div class="swatch">
+							<div class="swatch-color" style="background: var(--sun)"></div>
+							<div class="swatch-meta">
+								<div class="swatch-name">Sunlight Gold</div>
+								<div class="swatch-hex">#F4C95D</div>
+								<div class="subtle">Calls‑to‑action, highlights</div>
+							</div>
+						</div>
+						<div class="swatch">
+							<div class="swatch-color" style="background: var(--bg)"></div>
+							<div class="swatch-meta">
+								<div class="swatch-name">Soft Neutral</div>
+								<div class="swatch-hex">#F5F1E6</div>
+								<div class="subtle">Page background, cards</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<h3>Color Usage Guidelines</h3>
+					<ul class="subtle">
+						<li>
+							Use <strong>Soft Neutral</strong> or white as the main background for
+							readability.
+						</li>
+						<li>
+							Reserve <strong>Sunlight Gold</strong> for buttons, key highlights, and
+							important information.
+						</li>
+						<li>
+							Use <strong>Grass Green</strong> and <strong>Ocean Blue</strong> as
+							accent blocks, headings, or icon fills.
+						</li>
+						<li>
+							Keep overall designs to 2–3 colors at a time to maintain a clean, premium
+							feel.
+						</li>
+					</ul>
+				</div>
+			</section>
 
-        <!-- COLOR PALETTE -->
-        <section>
-            <h2>Color Palette</h2>
-            <p>
-                A balanced earthy mix that reflects nature, reliability, and warmth. Use color intentionally—keep
-                layouts
-                mostly neutral with one or two accent colors.
-            </p>
-            <div class="card">
-                <h3>Core Colors</h3>
-                <div class="swatches">
-                    <div class="swatch">
-                        <div class="swatch-color" style="background: var(--green);"></div>
-                        <div class="swatch-meta">
-                            <div class="swatch-name">Grass Green</div>
-                            <div class="swatch-hex">#5A7D3D</div>
-                            <div class="subtle">Nature, energy, outdoor walks</div>
-                        </div>
-                    </div>
-                    <div class="swatch">
-                        <div class="swatch-color" style="background: var(--sand);"></div>
-                        <div class="swatch-meta">
-                            <div class="swatch-name">Sand Brown</div>
-                            <div class="swatch-hex">#CBAE86</div>
-                            <div class="subtle">Neutral base, backgrounds</div>
-                        </div>
-                    </div>
-                    <div class="swatch">
-                        <div class="swatch-color" style="background: var(--wood);"></div>
-                        <div class="swatch-meta">
-                            <div class="swatch-name">Warm Wood</div>
-                            <div class="swatch-hex">#8B5E3C</div>
-                            <div class="subtle">Primary text & logo pad</div>
-                        </div>
-                    </div>
-                    <div class="swatch">
-                        <div class="swatch-color" style="background: var(--ocean);"></div>
-                        <div class="swatch-meta">
-                            <div class="swatch-name">Ocean Blue</div>
-                            <div class="swatch-hex">#3C6E71</div>
-                            <div class="subtle">Depth, trust, contrast</div>
-                        </div>
-                    </div>
-                    <div class="swatch">
-                        <div class="swatch-color" style="background: var(--sun);"></div>
-                        <div class="swatch-meta">
-                            <div class="swatch-name">Sunlight Gold</div>
-                            <div class="swatch-hex">#F4C95D</div>
-                            <div class="subtle">Calls‑to‑action, highlights</div>
-                        </div>
-                    </div>
-                    <div class="swatch">
-                        <div class="swatch-color" style="background: var(--bg);"></div>
-                        <div class="swatch-meta">
-                            <div class="swatch-name">Soft Neutral</div>
-                            <div class="swatch-hex">#F5F1E6</div>
-                            <div class="subtle">Page background, cards</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Color Usage Guidelines</h3>
-                <ul class="subtle">
-                    <li>Use <strong>Soft Neutral</strong> or white as the main background for readability.</li>
-                    <li>Reserve <strong>Sunlight Gold</strong> for buttons, key highlights, and important information.
-                    </li>
-                    <li>Use <strong>Grass Green</strong> and <strong>Ocean Blue</strong> as accent blocks, headings, or
-                        icon fills.</li>
-                    <li>Keep overall designs to 2–3 colors at a time to maintain a clean, premium feel.</li>
-                </ul>
-            </div>
-        </section>
+			<!-- TYPOGRAPHY -->
+			<section>
+				<h2>Typography</h2>
+				<p>
+					Typography is modern, clean, and slightly geometric to match the angular
+					paw mark while staying warm and approachable.
+				</p>
+				<div class="grid grid-2">
+					<div class="card">
+						<h3>Font Stack</h3>
+						<p><strong>Logo & Headings:</strong> Montserrat (Google Font)</p>
+						<p><strong>Subheadings & Body:</strong> Lato (Google Font)</p>
+						<p>
+							<strong>Accent / Quotes:</strong> Playfair Display Italic (optional)
+						</p>
+						<div class="type-sample">
+							<div class="type-label">Logo / H1 – Montserrat Bold</div>
+							<div class="type-heading">[Brand Name] Dog Services</div>
+						</div>
+						<div class="type-sample">
+							<div class="type-label">Heading – Montserrat Semibold</div>
+							<div class="type-subheading">Premium walks, sitting & daycare</div>
+						</div>
+						<div class="type-sample">
+							<div class="type-label">Body – Lato Regular</div>
+							<p class="type-body">
+								We provide reliable, nature‑focused care for dogs who love to explore,
+								play, and relax in safe, supervised environments.
+							</p>
+						</div>
+						<div class="type-sample">
+							<div class="type-label">Accent – Playfair Display Italic</div>
+							<p class="type-accent">“Happy dogs, peaceful humans.”</p>
+						</div>
+					</div>
+					<div class="card">
+						<h3>Typography Guidelines</h3>
+						<ul class="subtle">
+							<li>
+								Use <strong>Montserrat</strong> for headings, navigation, and key
+								labels.
+							</li>
+							<li>
+								Use <strong>Lato</strong> for paragraphs, service descriptions, and
+								small UI text.
+							</li>
+							<li>
+								Use <strong>Playfair Display Italic</strong> sparingly for quotes or
+								emotional emphasis.
+							</li>
+							<li>
+								Maintain generous line spacing and avoid all‑caps in body text for
+								readability.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 
-        <!-- TYPOGRAPHY -->
-        <section>
-            <h2>Typography</h2>
-            <p>
-                Typography is modern, clean, and slightly geometric to match the angular paw mark while staying warm and
-                approachable.
-            </p>
-            <div class="grid grid-2">
-                <div class="card">
-                    <h3>Font Stack</h3>
-                    <p><strong>Logo & Headings:</strong> Montserrat (Google Font)</p>
-                    <p><strong>Subheadings & Body:</strong> Lato (Google Font)</p>
-                    <p><strong>Accent / Quotes:</strong> Playfair Display Italic (optional)</p>
-                    <div class="type-sample">
-                        <div class="type-label">Logo / H1 – Montserrat Bold</div>
-                        <div class="type-heading">[Brand Name] Dog Services</div>
-                    </div>
-                    <div class="type-sample">
-                        <div class="type-label">Heading – Montserrat Semibold</div>
-                        <div class="type-subheading">Premium walks, sitting & daycare</div>
-                    </div>
-                    <div class="type-sample">
-                        <div class="type-label">Body – Lato Regular</div>
-                        <p class="type-body">
-                            We provide reliable, nature‑focused care for dogs who love to explore, play, and relax in
-                            safe,
-                            supervised environments.
-                        </p>
-                    </div>
-                    <div class="type-sample">
-                        <div class="type-label">Accent – Playfair Display Italic</div>
-                        <p class="type-accent">
-                            “Happy dogs, peaceful humans.”
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Typography Guidelines</h3>
-                    <ul class="subtle">
-                        <li>Use <strong>Montserrat</strong> for headings, navigation, and key labels.</li>
-                        <li>Use <strong>Lato</strong> for paragraphs, service descriptions, and small UI text.</li>
-                        <li>Use <strong>Playfair Display Italic</strong> sparingly for quotes or emotional emphasis.
-                        </li>
-                        <li>Maintain generous line spacing and avoid all‑caps in body text for readability.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+			<!-- BRAND PERSONALITY & VOICE -->
+			<section>
+				<h2>Brand Personality & Voice</h2>
+				<div class="grid grid-2">
+					<div class="card">
+						<h3>Personality</h3>
+						<div class="chips">
+							<span class="chip">Professional</span>
+							<span class="chip">Trustworthy</span>
+							<span class="chip">Outdoorsy</span>
+							<span class="chip">Warm</span>
+							<span class="chip">Calm</span>
+						</div>
+						<p>
+							The brand should feel like a reliable, experienced friend who genuinely
+							cares about each dog’s wellbeing. It’s not overly cute or chaotic—more
+							grounded, capable, and nature‑aligned.
+						</p>
+					</div>
+					<div class="card">
+						<h3>Voice & Messaging</h3>
+						<ul class="subtle">
+							<li><strong>Voice:</strong> Clear, warm, confident, and reassuring.</li>
+							<li>
+								<strong>Avoid:</strong> Baby talk, excessive exclamation marks, or
+								overly corporate jargon.
+							</li>
+							<li>
+								<strong>Focus on:</strong> Safety, reliability, outdoor time, and peace
+								of mind for owners.
+							</li>
+						</ul>
+						<p><strong>Example micro‑copy:</strong></p>
+						<p class="type-body">
+							“Every walk, every stay, every play session is designed to keep your dog
+							happy, safe, and fulfilled.”
+						</p>
+					</div>
+				</div>
+			</section>
 
-        <!-- BRAND PERSONALITY & VOICE -->
-        <section>
-            <h2>Brand Personality & Voice</h2>
-            <div class="grid grid-2">
-                <div class="card">
-                    <h3>Personality</h3>
-                    <div class="chips">
-                        <span class="chip">Professional</span>
-                        <span class="chip">Trustworthy</span>
-                        <span class="chip">Outdoorsy</span>
-                        <span class="chip">Warm</span>
-                        <span class="chip">Calm</span>
-                    </div>
-                    <p>
-                        The brand should feel like a reliable, experienced friend who genuinely cares about each dog’s
-                        wellbeing.
-                        It’s not overly cute or chaotic—more grounded, capable, and nature‑aligned.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>Voice & Messaging</h3>
-                    <ul class="subtle">
-                        <li><strong>Voice:</strong> Clear, warm, confident, and reassuring.</li>
-                        <li><strong>Avoid:</strong> Baby talk, excessive exclamation marks, or overly corporate jargon.
-                        </li>
-                        <li><strong>Focus on:</strong> Safety, reliability, outdoor time, and peace of mind for owners.
-                        </li>
-                    </ul>
-                    <p><strong>Example micro‑copy:</strong></p>
-                    <p class="type-body">
-                        “Every walk, every stay, every play session is designed to keep your dog happy, safe, and
-                        fulfilled.”
-                    </p>
-                </div>
-            </div>
-        </section>
+			<!-- EXAMPLE APPLICATIONS -->
+			<section>
+				<h2>Example Applications</h2>
 
-        <!-- EXAMPLE APPLICATIONS -->
-        <section>
-            <h2>Example Applications</h2>
+				<!-- Website header example -->
+				<div class="card">
+					<h3>Website Header</h3>
+					<div class="example-header">
+						<div class="logo-preview">
+							<div class="paw-icon" style="transform: scale(0.9)">
+								<div class="paw-pad"></div>
+								<div class="paw-toe toe-1"></div>
+								<div class="paw-toe toe-2"></div>
+								<div class="paw-toe toe-3"></div>
+								<div class="paw-toe toe-4"></div>
+							</div>
+							<div>
+								<div class="brand-name">[Brand Name]</div>
+								<div class="brand-descriptor">Dog Walking · Sitting · Daycare</div>
+							</div>
+						</div>
+						<div class="example-header-cta">
+							<p
+								class="subtle"
+								style="color: rgba(255, 255, 255, 0.9); margin-bottom: 0.4rem"
+							>
+								Reliable, nature‑focused care for your dog.
+							</p>
+							<button class="btn-primary">Book a Meet &amp; Greet</button>
+						</div>
+					</div>
+				</div>
 
-            <!-- Website header example -->
-            <div class="card">
-                <h3>Website Header</h3>
-                <div class="example-header">
-                    <div class="logo-preview">
-                        <div class="paw-icon" style="transform: scale(0.9);">
-                            <div class="paw-pad"></div>
-                            <div class="paw-toe toe-1"></div>
-                            <div class="paw-toe toe-2"></div>
-                            <div class="paw-toe toe-3"></div>
-                            <div class="paw-toe toe-4"></div>
-                        </div>
-                        <div>
-                            <div class="brand-name">[Brand Name]</div>
-                            <div class="brand-descriptor">Dog Walking · Sitting · Daycare</div>
-                        </div>
-                    </div>
-                    <div class="example-header-cta">
-                        <p class="subtle" style="color: rgba(255,255,255,0.9); margin-bottom:0.4rem;">
-                            Reliable, nature‑focused care for your dog.
-                        </p>
-                        <button class="btn-primary">Book a Meet &amp; Greet</button>
-                    </div>
-                </div>
-            </div>
+				<!-- Business card & social tile -->
+				<div class="grid grid-2" style="margin-top: 1.5rem">
+					<div class="card">
+						<h3>Business Card Layout</h3>
+						<div class="example-card">
+							<h4>[Brand Name]</h4>
+							<small>Dog Walking · Sitting · Daycare</small>
+							<p style="margin-top: 0.6rem">
+								<strong>Name Surname</strong><br />
+								Lead Walker &amp; Carer<br />
+								0400 000 000 · hello@brand.com<br />
+								brand.com
+							</p>
+							<p style="margin-top: 0.4rem; font-size: 0.8rem; color: #555">
+								Serving local dogs with safe, structured, and joyful outdoor time.
+							</p>
+						</div>
+					</div>
+					<div class="card">
+						<h3>Social Media Tile</h3>
+						<div
+							class="example-card"
+							style="background: linear-gradient(135deg, #f5f1e6, #cbae86)"
+						>
+							<p class="type-heading" style="font-size: 1.1rem; margin-bottom: 0.2rem">
+								First walk free for new clients
+							</p>
+							<p class="type-body" style="font-size: 0.85rem">
+								Let your dog try us out—no pressure, just a happy, well‑supervised
+								adventure.
+							</p>
+							<p class="subtle" style="margin-top: 0.5rem">
+								Use code <strong>PAWSTART</strong> when you book online.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <!-- Business card & social tile -->
-            <div class="grid grid-2" style="margin-top:1.5rem;">
-                <div class="card">
-                    <h3>Business Card Layout</h3>
-                    <div class="example-card">
-                        <h4>[Brand Name]</h4>
-                        <small>Dog Walking · Sitting · Daycare</small>
-                        <p style="margin-top:0.6rem;">
-                            <strong>Name Surname</strong><br>
-                            Lead Walker &amp; Carer<br>
-                            0400 000 000 · hello@brand.com<br>
-                            brand.com
-                        </p>
-                        <p style="margin-top:0.4rem; font-size:0.8rem; color:#555;">
-                            Serving local dogs with safe, structured, and joyful outdoor time.
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Social Media Tile</h3>
-                    <div class="example-card" style="background: linear-gradient(135deg, #F5F1E6, #CBAE86);">
-                        <p class="type-heading" style="font-size:1.1rem; margin-bottom:0.2rem;">
-                            First walk free for new clients
-                        </p>
-                        <p class="type-body" style="font-size:0.85rem;">
-                            Let your dog try us out—no pressure, just a happy, well‑supervised adventure.
-                        </p>
-                        <p class="subtle" style="margin-top:0.5rem;">
-                            Use code <strong>PAWSTART</strong> when you book online.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <p class="footer-note">
-            Edit this HTML file to plug in your actual brand name, contact details, and any additional components you
-            need.
-        </p>
-    </div>
-</body>
-
+			<p class="footer-note">
+				Edit this HTML file to plug in your actual brand name, contact details, and
+				any additional components you need.
+			</p>
+		</div>
+	</body>
 </html>
